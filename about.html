@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Fill Example</title>
+    <style>
+        body {
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white for contrast */
+            font-family: Arial, sans-serif; /* Set a default font */
+            margin: 0;
+            height: 100vh; /* Set height to full viewport height */
+        }
+
+        .container {
+            display: flex; /* Use Flexbox for layout */
+            height: 100%; /* Make container fill the full height of the body */
+        }
+
+        .column {
+            flex: 1; /* Each column takes equal space */
+            padding: 10px;
+        }
+
+        .column-1 {
+            flex: 0 0 50%; /* First column takes 50% of the width */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+        }
+
+        .column-2 {
+            flex: 0 0 50%; /* Second column takes 50% of the width */
+            display: flex;
+            flex-direction: column; /* Stack rows vertically */
+        }
+
+        .row {
+            flex: 1; /* Each row takes equal space within the second column */
+            display: flex; /* Use Flexbox for images */
+            justify-content: center; /* Center images horizontally */
+            align-items: center; /* Center images vertically */
+            margin-bottom: 10px; /* Space between rows */
+        }
+
+        .image {
+            width: 100%; /* Make images responsive */
+            height: 100%; /* Fill the height of the row */
+            object-fit: cover; /* Cover the entire area without distortion */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column column-1">
+        <h1>Welcome to Bhutan</h1>
+        <p>Bhutan is a small kingdom nestled in the Himalayas, known for its stunning landscapes and rich culture. The country is famous for its unique approach to development, prioritizing Gross National Happiness (GNH) over mere economic growth. This philosophy, introduced by the Fourth King, Jigme Singye Wangchuck, emphasizes the well-being of citizens and integrates environmental conservation, cultural preservation, and good governance into its development strategies.
+            At the heart of Bhutan's development model are four pillars of GNH: sustainable and equitable socio-economic development, conservation of the environment, preservation and promotion of culture, and good governance. These principles guide Bhutan's policies, ensuring that development efforts enhance the happiness and quality of life for all Bhutanese people.</p>
+    <p>Socio-Economic Development
+        Bhutan’s socio-economic strategy aims to promote equitable growth that benefits all citizens while minimizing environmental impact. The government supports sustainable agriculture practices and community-based tourism that respects local cultures and environments. Education and healthcare are prioritized, with free access provided to all citizens, contributing to improved living standards.
+        The country has made significant strides in reducing poverty levels, with extreme poverty decreasing from 36% in 2007 to around 10% in recent years. This progress is supported by fiscal revenues from hydropower exports and a focus on high-value, low-impact tourism.
+        </p>
+        </div>
+    
+    <div class="column column-2">
+        <div class="row">
+            <img src="https://www.holidify.com/images/cmsuploads/compressed/culture1_20180920080134.jpg" alt="Image 1" class="image">
+        </div>
+        <div class="row">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/3e/05/86/tashichho-dzong-it-was.jpg" alt="Image 2" class="image">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
